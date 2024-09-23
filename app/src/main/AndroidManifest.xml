@@ -12,6 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Geofence"
         tools:targetApi="31">
+
+        <!--    ResultMapActivity     -->
+        <activity
+            android:name=".ResultMapActivity"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.ResultMapActivity" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+
+        <!--    MapActivity     -->
+        <activity
+            android:name=".MapActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.MapActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--    MainActivity     -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,6 +45,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

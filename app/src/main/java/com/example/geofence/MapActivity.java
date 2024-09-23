@@ -1,6 +1,5 @@
 package com.example.geofence;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,36 +8,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_map);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
-//        test
+//        google maps
 
-//        MapActivity
-        Intent intent = new Intent();
+//        long tap
 
-        findViewById(R.id.MapActivity).setOnClickListener(view -> {
-            intent.setAction("android.MapActivity");
-            startActivity(intent);
-        });
+//        cancel
 
-//        Terminate
-
-//        ResultsMapActivity
-        findViewById(R.id.ResultsMapActivity).setOnClickListener(view -> {
-            intent.setAction("android.ResultMapActivity");
-            startActivity(intent);
-        });
+//        start
 
 
     }

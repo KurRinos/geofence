@@ -1,6 +1,5 @@
 package com.example.geofence;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -9,35 +8,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class ResultMapActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_result_map);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-        });
-
-//        test
-
-//        MapActivity
-        Intent intent = new Intent();
-
-        findViewById(R.id.MapActivity).setOnClickListener(view -> {
-            intent.setAction("android.MapActivity");
-            startActivity(intent);
-        });
-
-//        Terminate
-
-//        ResultsMapActivity
-        findViewById(R.id.ResultsMapActivity).setOnClickListener(view -> {
-            intent.setAction("android.ResultMapActivity");
-            startActivity(intent);
         });
 
 
